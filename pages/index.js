@@ -1,11 +1,11 @@
 import Protected from "../components/protectedroute";
+import Welcome from "../components/welcome";
 export default function Home() {
 
 	return (
 		<Protected>
-			<div className="flex h-full flex-col justify-center items-center bg-secondary-400">
-				<h1 className="text-4xl mb-5 font-bold">Home</h1>
-				<span className="text-7xl">🏡</span>
+			<div className="flex h-full flex-col  bg-secondary-400">
+				<Welcome />
 			</div>
 		</Protected>
 	);
