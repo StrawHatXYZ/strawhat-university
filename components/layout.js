@@ -17,6 +17,13 @@ import {
 
 export default function Layout({ children }) {
   const router = useRouter();
+  const { user, logout } = useAuth();
+  const handleClick = async () => {
+    console.log("okokok");
+    await logout();
+    await localStorage.clear();
+    router.push("/login");
+  };
 
   const menuItems = [
     {
@@ -57,46 +64,40 @@ export default function Layout({ children }) {
   ];
 
   return (
-    <div class="flex">
-      <aside class="h-screen sticky top-0 bg-white w-full md:w-72">
-        <nav className="h-full">
-          <ul className="h-full">
-            <div className="flex flex-col justify-between h-full">
-              <div>
-                <Logo />
-                {menuItems.map(({ href, title, icon }) => (
-                  <li className="my-3" key={title}>
-                    <Link href={href} legacyBehavior>
-                      <a
-                        className={`flex px-6 py-3 items-center rounded hover:text-secondary-700 hover:bg-primary-100 cursor-pointer ${
-                          router.asPath === href
-                            ? "text-black font-semibold border-r-4 border-primary-500"
-                            : "text-secondary-600"
+    <div className="min-h-screen flex flex-col">
+      <div className="flex flex-col md:flex-row flex-1">
+        <aside className="bg-white w-full md:w-1/5">
+          <nav>
+            <ul>
+              <Logo />
+              {menuItems.map(({ href, title, icon }) => (
+                <li className="my-3" key={title}>
+                  <Link href={href} legacyBehavior>
+                    <a
+                      className={`flex px-6 py-3 items-center rounded  hover:bg-primary-100 cursor-pointer ${
+                        router.asPath === href
+                          ? "text-black font-semibold border-r-4 border-primary-500"
+                          : "text-secondary-600"
+                      }`}
+                    >
+                      <i
+                        className={`px-4 text-2xl ${
+                          router.asPath === href &&
+                          "text-primary-500  font-semibold"
                         }`}
                       >
-                        <i
-                          className={`px-4 text-2xl ${
-                            router.asPath === href &&
-                            "text-primary-500  font-semibold"
-                          }`}
-                        >
-                          {icon}
-                        </i>{" "}
-                        {title}
-                      </a>
-                    </Link>
-                  </li>
-                ))}
-              </div>
-              <div>
-                <li className="my-3 border-t border-secondary-500" key="logout">
+                        {icon}
+                      </i>{" "}
+                      {title}
+                    </a>
+                  </Link>
+                </li>
+              ))}
+              <div className="flex h-52 flex-col  justify-end">
+                <li className="">
                   <Link
                     href="/logout"
-                    className={`flex px-6 py-4 items-center rounded  hover:bg-primary-100 hover:text-secondary-700 cursor-pointer ${
-                      router.asPath === "/logout"
-                        ? "text-black font-semibold border-r-4 border-primary-500"
-                        : "text-secondary-600"
-                    }`}
+                    className="flex px-6 py-3 items-center rounded  hover:bg-primary-100 cursor-pointer text-secondary-600"
                   >
                     <i className="px-4 text-2xl">
                       <MdLogout />
@@ -105,12 +106,11 @@ export default function Layout({ children }) {
                   </Link>
                 </li>
               </div>
-            </div>
-          </ul>
-        </nav>
-      </aside>
-
-      <main className="flex-1 ">{children}</main>
+            </ul>
+          </nav>
+        </aside>
+        <main className="flex-1">{children}</main>
+      </div>
     </div>
   );
 }
