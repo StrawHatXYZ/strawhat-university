@@ -11,8 +11,18 @@ export default function Signin() {
   const [data, setData] = useState({ email: "", password: "" });
   const { login, user } = useAuth();
   const router = useRouter();
-  const toastSuccess = (msg) => toast.success(msg, { autoClose: 3000,position: "top-right",theme: "colored" });
-  const toastError = (msg) => toast.error(msg, { autoClose: 3000,position: "top-right",theme: "colored" });
+  const toastSuccess = (msg) =>
+    toast.success(msg, {
+      autoClose: 3000,
+      position: "top-right",
+      theme: "colored",
+    });
+  const toastError = (msg) =>
+    toast.error(msg, {
+      autoClose: 3000,
+      position: "top-right",
+      theme: "colored",
+    });
   useEffect(() => {
     if (user) router.push("/");
   }, [router, user]);
@@ -27,7 +37,7 @@ export default function Signin() {
             toastSuccess("Login successful");
             setTimeout(() => {
               router.push("/");
-          }, 3000)
+            }, 3000);
           });
         } catch (e) {
           switch (e.code) {
@@ -62,7 +72,7 @@ export default function Signin() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen bg-secondary-400">
+    <div className="flex flex-col justify-center items-center h-screen p-10 bg-secondary-400">
       <ToastContainer />
       <div className="flex items-center pb-16">
         <span className="pr-4">
@@ -88,12 +98,12 @@ export default function Signin() {
           Straw Hat University
         </h1>
       </div>
-      <div className="w-full bg-white rounded-lg md:mt-0 sm:max-w-md xl:p-0">
+      <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0">
         <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
           <h1 className="text-xl font-bold text-center leading-tight tracking-tight text-gray-900 md:text-2xl">
             Login
-          </h1>          
-          <form className="space-y-4 md:space-y-6" action="#">
+          </h1>
+          <form className="space-y-4 md:space-y-6 " action="#">
             <div>
               <label
                 htmlFor="email"

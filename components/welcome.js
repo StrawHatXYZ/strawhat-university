@@ -3,13 +3,13 @@ export default function Welcome() {
   const { user } = useAuth();
   console.log(user);
   return (
-    <div className="flex justify-between mx-10 mt-20 ">
-      <p className="text-4xl mb-5 font-medium">
+    <div className="flex flex-col md:flex-row md:justify-between  md:mt-12 ">
+      <p className="md:text-4xl text-3xl mb-10 font-medium">
         Welcome, <span className="text-primary-500">{user.name}</span>
       </p>
       <div>
-        <div className="flex flex-col items-center">
-          <div className="relative text-gray-400">
+        <div className="flex flex-col items-center ">
+          <div className="relative text-gray-400 w-full">
             <span className="absolute inset-y-0 left-0 flex items-center pl-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ export default function Welcome() {
             <input
               type="text"
               name="search"
-              className="py-3.5 px-20 text-sm text-white rounded-lg pl-10 focus:outline-none bg-white focus:text-secondary-800"
+              className="py-3.5 w-full px-20  text-sm text-white rounded-lg pl-10 focus:outline-none bg-white focus:text-secondary-800"
               placeholder="Search..."
               autoComplete="off"
             />

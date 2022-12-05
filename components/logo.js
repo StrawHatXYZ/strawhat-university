@@ -1,7 +1,7 @@
 export default function Logo() {
   return (
-    <div className="flex flex-row justify-center items-center pb-8">
-      <span className="pr-6">
+    <div className="flex flex-row md:justify-center justify-between md:items-center items-start pb-8">
+      <span className="md:pl-0 px-3  md:pr-6 py-3">
         <svg
           width="55"
           height="55"
@@ -20,10 +20,13 @@ export default function Logo() {
           />
         </svg>
       </span>
-      <div className="flex h-full flex-col justify-center items-center py-6 pr-3">
+      <div className="flex h-full md:flex-col justify-center items-center py-6 pr-3">
         <h1 className="text-2xl font-bold text-primary-600">STRAW HAT</h1>
-        <h1 className="text-2xl font-bold text-primary-600">UNIVERSITY</h1>
+        <h1 className="text-2xl font-bold text-primary-600 md:ml-0 ml-2">
+          UNIVERSITY
+        </h1>
       </div>
+      <p className="md:hidden p-6">Menu</p>
     </div>
   );
 }

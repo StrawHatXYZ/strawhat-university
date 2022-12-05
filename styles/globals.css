@@ -16,6 +16,27 @@ a {
   box-sizing: border-box;
 }
 
+.expanded .line1 {
+  transform: rotate(-45deg) translate(-12px, 8px);
+}
+
+.expanded .line2 {
+  transform: rotate(45deg) translate(4px, -16px);
+}
+
+.navbarin {
+  animation: translate 0.5s;
+}
+
+@keyframes translate {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
