@@ -58,10 +58,10 @@ export default function Signup() {
                 displayName: name + " " + lname,
               })
                 .then(() => {
-                  // console.log("success");
+                  console.log("success");
                 })
                 .catch((error) => {
-                  // console.log("error");
+                  console.log("error");
                 });
               setDoc(
                 doc(

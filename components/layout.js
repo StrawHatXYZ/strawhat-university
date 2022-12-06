@@ -158,7 +158,7 @@ export default function Layout({ children }) {
                 </div>
                 <div>
                   <li
-                    className={`my-3 border-t md:visible border-secondary-500 navbarin ${
+                    className={`my-3 border-t md:visible border-secondary-500  ${
                       menuOpen ? "block" : "hidden"
                     } md:block
                   }`}
