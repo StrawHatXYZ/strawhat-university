@@ -98,7 +98,7 @@ export default function Signin() {
           Straw Hat University
         </h1>
       </div>
-      <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0">
+      <div className="w-full bg-white rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0">
         <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
           <h1 className="text-xl font-bold text-center leading-tight tracking-tight text-gray-900 md:text-2xl">
             Login
@@ -107,7 +107,7 @@ export default function Signin() {
             <div>
               <label
                 htmlFor="email"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+                className="block mb-2 text-sm font-medium text-gray-900"
               >
                 Your Email
               </label>
@@ -115,7 +115,7 @@ export default function Signin() {
                 type="email"
                 name="email"
                 id="email"
-                className="bg-secondary-300 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-3  placeholder-gray-400  focus:ring-indigo-500 focus:border-indigo-500"
+                className="bg-secondary-300 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-100 focus:border-primary-100 block w-full p-3  placeholder-gray-400  focus:ring-indigo-500 focus:border-indigo-500"
                 placeholder="hello@gmail.com"
                 onChange={(e) => setData({ ...data, email: e.target.value })}
                 required=""
@@ -124,7 +124,7 @@ export default function Signin() {
             <div>
               <label
                 htmlFor="password"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+                className="block mb-2 text-sm font-medium text-gray-900"
               >
                 Password
               </label>
@@ -133,7 +133,7 @@ export default function Signin() {
                 name="password"
                 id="password"
                 placeholder="**********"
-                className="bg-secondary-300 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-3  placeholder-gray-400  focus:ring-indigo-500 focus:border-indigo-500"
+                className="bg-secondary-300 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-100 focus:border-primary-100 block w-full p-3  placeholder-gray-400 "
                 onChange={(e) => setData({ ...data, password: e.target.value })}
                 required=""
               />
@@ -145,7 +145,7 @@ export default function Signin() {
                     id="remember"
                     aria-describedby="remember"
                     type="checkbox"
-                    className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-indigo-300 focus:ring-primary ring-offset-gray-800"
+                    className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3  focus:ring-primary-100 ring-offset-gray-800"
                     required=""
                   />
                 </div>
@@ -157,7 +157,7 @@ export default function Signin() {
               </div>
               <a
                 href="#"
-                className="text-sm font-medium text-primary text-black hover:underline"
+                className="text-sm font-medium text-black hover:underline"
               >
                 Forgot password?
               </a>
@@ -170,11 +170,11 @@ export default function Signin() {
             >
               Sign in
             </button>
-            <p className="text-sm font-light text-gray-500 dark:text-gray-600">
+            <p className="text-sm font-light text-gray-500 ">
               Don’t have an account yet?{" "}
               <Link
                 href="/signup"
-                className="font-medium text-primary hover:underline dark:text-indigo-500 dark:text-primary"
+                className="font-medium  hover:underline text-indigo-500 "
               >
                 Sign up
               </Link>

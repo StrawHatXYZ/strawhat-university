@@ -137,9 +137,9 @@ export default function Signup() {
             Straw Hat University
           </h1>
         </div>
-        <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 ">
+        <div className="w-full bg-white rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 ">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-            <h1 className="text-xl font-bold text-center leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-black">
+            <h1 className="text-xl font-bold text-center leading-tight tracking-tight text-gray-900 md:text-2xl">
               Create Account
             </h1>
 
@@ -156,7 +156,7 @@ export default function Signup() {
                     type="text"
                     name="name"
                     id="name"
-                    className="bg-secondary-300 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-3  dark:placeholder-gray-400  dark:focus:ring-indigo-500 dark:focus:border-indigo-500"
+                    className="bg-secondary-300 border border-gray-300 text-gray-900 sm:text-sm rounded-lg  focus:border-primary-300 block w-full p-3  placeholder-gray-400 focus:ring-indigo-500 "
                     placeholder="Name"
                     onChange={(e) => setName(e.target.value)}
                     required=""
@@ -173,7 +173,7 @@ export default function Signup() {
                     type="text"
                     name="lastname"
                     id="lastname"
-                    className="bg-secondary-300 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary ml-2 focus:border-primary block w-full p-3  dark:placeholder-gray-400  dark:focus:ring-indigo-500 dark:focus:border-indigo-500"
+                    className="bg-secondary-300 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary ml-2 focus:border-primary block w-full p-3  placeholder-gray-400  focus:ring-indigo-500 focus:border-indigo-300"
                     placeholder="Last name"
                     onChange={(e) => setLname(e.target.value)}
                     required=""
@@ -183,7 +183,7 @@ export default function Signup() {
               <div>
                 <label
                   htmlFor="tel"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+                  className="block mb-2 text-sm font-medium text-gray-900"
                 >
                   Phone Number
                 </label>
@@ -192,7 +192,7 @@ export default function Signup() {
                   id="phone"
                   name="phone"
                   pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-                  className="bg-secondary-300 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-3  dark:placeholder-gray-400  dark:focus:ring-indigo-500 dark:focus:border-indigo-500"
+                  className="bg-secondary-300 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-3  placeholder-gray-400 focus:ring-indigo-500 focus:border-indigo-300"
                   placeholder="+91"
                   onChange={(e) => setPhone(e.target.value)}
                   required=""
@@ -201,7 +201,7 @@ export default function Signup() {
               <div>
                 <label
                   htmlFor="email"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+                  className="block mb-2 text-sm font-medium text-gray-900"
                 >
                   Your Email
                 </label>
@@ -209,7 +209,7 @@ export default function Signup() {
                   type="email"
                   name="email"
                   id="email"
-                  className="bg-secondary-300 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-3  dark:placeholder-gray-400  dark:focus:ring-indigo-500 dark:focus:border-indigo-500"
+                  className="bg-secondary-300 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-3  placeholder-gray-400  focus:ring-indigo-300 focus:border-indigo-300"
                   placeholder="hello@gmail.com"
                   onChange={(e) => setEmail(e.target.value)}
                   required=""
@@ -219,7 +219,7 @@ export default function Signup() {
               <div>
                 <label
                   htmlFor="password"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+                  className="block mb-2 text-sm font-medium text-gray-900"
                 >
                   Password
                 </label>
@@ -228,7 +228,7 @@ export default function Signup() {
                   name="password"
                   id="password"
                   placeholder="••••••••"
-                  className="bg-secondary-300 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-3  dark:placeholder-gray-400  dark:focus:ring-bluine-500 dark:focus:border-indigo-500"
+                  className="bg-secondary-300 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-3  placeholder-gray-400  focus:ring-indigo-300 focus:border-indigo-300"
                   onChange={(e) => setPassword(e.target.value)}
                   required=""
                 />
@@ -236,7 +236,7 @@ export default function Signup() {
               <div>
                 <label
                   htmlFor="password"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+                  className="block mb-2 text-sm font-medium text-gray-900 "
                 >
                   Confirm Password
                 </label>
@@ -245,7 +245,7 @@ export default function Signup() {
                   name="confpassword"
                   id="confpassword"
                   placeholder="••••••••"
-                  className="bg-secondary-300 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-3  dark:placeholder-gray-400  dark:focus:ring-indigo-500 dark:focus:border-indigo-500"
+                  className="bg-secondary-300 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-3  placeholder-gray-400  focus:ring-indigo-300 focus:border-indigo-300"
                   onChange={(e) => setConfPassword(e.target.value)}
                   required=""
                 />
@@ -257,15 +257,12 @@ export default function Signup() {
                       id="remember"
                       aria-describedby="remember"
                       type="checkbox"
-                      className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-indigo-300  dark:focus:ring-primary dark:ring-offset-gray-800"
+                      className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-indigo-300  focus:ring-primary ring-offset-gray-800"
                       required=""
                     />
                   </div>
                   <div className="ml-3 text-sm">
-                    <label
-                      htmlFor="remember"
-                      className="text-gray-500 dark:text-gray-600"
-                    >
+                    <label htmlFor="remember" className="text-gray-500 ">
                       Remember me
                     </label>
                   </div>
@@ -274,15 +271,15 @@ export default function Signup() {
               <button
                 type="submit"
                 onClick={handleSubmit}
-                className="w-full text-white bg-primary hover:bg-indigo-700 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm px-5 py-3 text-center dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800"
+                className="w-full text-white bg-primary focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm px-5 py-3 text-center bg-indigo-600 hover:bg-indigo-700 "
               >
                 Sign Up
               </button>
-              <p className="text-sm font-light text-gray-500 dark:text-gray-600">
+              <p className="text-sm font-light text-gray-500 ">
                 Already have an account?{" "}
                 <Link
                   href="/"
-                  className="font-medium text-primary hover:underline dark:text-indigo-500"
+                  className="font-medium  hover:underline text-indigo-500"
                 >
                   Login
                 </Link>
