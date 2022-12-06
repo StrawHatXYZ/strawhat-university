@@ -141,7 +141,7 @@ export default function Layout({ children }) {
                   >
                     <Link href={href} legacyBehavior>
                       <a
-                        className={`flex px-6 py-3 transition-all delay-${duration} duration-500 items-center rounded hover:text-secondary-700 hover:bg-primary-100 cursor-pointer ${
+                        className={`flex px-6 py-3  items-center rounded hover:text-secondary-700 hover:bg-primary-100 cursor-pointer ${
                           router.asPath === href
                             ? "text-black font-semibold border-r-4 border-primary-500"
                             : "text-secondary-600"
