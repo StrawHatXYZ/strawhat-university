@@ -1,12 +1,23 @@
 import { useAuth } from "../contexts/UserAuthContexts";
+import Avatar from "boring-avatars";
+
 export default function Welcome() {
   const { user } = useAuth();
   console.log(user);
   return (
     <div className="flex flex-col md:flex-row md:justify-between  md:mt-12 ">
-      <p className="md:text-4xl text-3xl mb-10 font-medium">
-        Welcome, <span className="text-primary-500">{user.name}</span>
-      </p>
+      <div className="flex ">
+        <p className="md:text-4xl text-3xl mb-10 mr-6 font-medium">
+          Welcome, <span className="text-primary-500">{user.name}</span>
+        </p>
+        <Avatar
+          c
+          size={40}
+          name={user.name}
+          variant="beam"
+          colors={["#7551FF", "#292441", "#A2C6FF", "#2200B7", "#7A90CB"]}
+        />
+      </div>
       <div>
         <div className="flex flex-col items-center ">
           <div className="relative text-gray-400 w-full">
