@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Card({ title, description, imgUrl }) {
   return (
-    <div className="flex flex-col md:flex-row justify-around items-center bg-white  mt-6 rounded-lg  md:w-4/5">
+    <div className="flex flex-col md:flex-row justify-around items-center bg-white  mt-6 rounded-lg  md:w-4/5 hover:shadow hover:border border-primary-500/75  hover:scale-105 transform transition duration-500 ease-in-out">
       <div className="flex flex-col py-8 pl-8 md:w-1/2 justify-start items-start">
         <h1 className="text-3xl font-bold py-4">{title}</h1>
         <p className="text-gray-500 text-lg">

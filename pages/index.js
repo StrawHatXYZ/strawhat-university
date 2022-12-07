@@ -25,7 +25,11 @@ export default function Home({ data }) {
         <h1 className="text-4xl my-10 font-medium">Available Courses</h1>
         <div className="flex flex-col items-center justify-center">
           {data.map((e) => (
-            <Link key={e.id} href={`/courses/${e.url}`}>
+            <Link
+              className="flex items-center justify-center"
+              key={e.id}
+              href={`/courses/${e.url}`}
+            >
               <Card title={e.name} key={e} description={"SG"} imgUrl={"D"} />
             </Link>
           ))}

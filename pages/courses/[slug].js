@@ -31,13 +31,24 @@ export default function Course({ slug }) {
 
   return (
     <Layout>
-      <div className="flex flex-col items-center justify-center w-full">
-        <h1> {slug.name}</h1>
-        <ul>
-          {slug.modules?.modules.map((e, i) => (
-            <Accordion key={i} title={e.name} content={e.submodules} />
-          ))}
-        </ul>
+      <div className="md:mt-8 md:p-10 p-4">
+        <h1 className="text-3xl font-semibold text-primary-600 text-center md:text-left my-5 md:ml-12">
+          {slug.name}
+        </h1>
+        <div className="flex flex-col items-center justify-center w-full md:mt-10 ">
+          <ul className="w-11/12">
+            <div className="p-4 bg-white rounded-md divide-y-2">
+              {slug.modules?.modules.map((e, i) => (
+                <Accordion
+                  key={i}
+                  id={i}
+                  title={e.name}
+                  content={e.submodules}
+                />
+              ))}
+            </div>
+          </ul>
+        </div>
       </div>
     </Layout>
   );
