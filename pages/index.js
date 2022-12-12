@@ -17,7 +17,6 @@ export async function getServerSideProps() {
 }
 
 export default function Home({ data }) {
-  console.log(data + "gffd");
   return (
     <Layout>
       <div className="flex h-full flex-col p-10 bg-secondary-400">

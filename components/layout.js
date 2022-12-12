@@ -16,6 +16,7 @@ import {
 } from "react-icons/md";
 import { useAuth } from "../contexts/UserAuthContexts";
 import { useEffect, useState } from "react";
+import Protected from "./protectedroute";
 
 export default function Layout({ children }) {
   const router = useRouter();
@@ -71,8 +72,8 @@ export default function Layout({ children }) {
       duration: 1300,
     },
   ];
-  if (user) {
-    return (
+  return (
+    <Protected>
       <div className="flex flex-col md:flex-row ">
         <aside className="md:h-screen sticky top-0 bg-white/80 w-full  md:block md:w-72 z-50">
           <nav className="h-full ">
@@ -184,8 +185,6 @@ export default function Layout({ children }) {
 
         <main className="flex-1 ">{children}</main>
       </div>
-    );
-  } else {
-    router.push("/login");
-  }
+    </Protected>
+  );
 }
