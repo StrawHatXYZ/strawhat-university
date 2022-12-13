@@ -1,17 +1,19 @@
 import { useRouter } from "next/router";
-import Accordion from "../../components/Accordion";
-import Layout from "../../components/layout";
+import Accordion from "../../../components/Accordion";
+import Layout from "../../../components/layout";
 
 import { getDocs, collection } from "firebase/firestore";
-import { db } from "../../config/firebase.config";
+import { db } from "../../../config/firebase.config";
 
 export async function getStaticPaths() {
+  const dt = await getDocs(collection(db, "courses"));
+  var paths = [];
+  dt.forEach((e) => {
+    paths.push({ params: { slug: e.data().url.trim() } });
+  });
+  paths = paths.length === 0 ? [{}] : paths;
   return {
-    paths: [
-      { params: { slug: "blockchain-development" } },
-      { params: { slug: "web-development-with-nextjs" } },
-      { params: { slug: "mobile-development-with-flutter" } },
-    ],
+    paths: paths,
     fallback: false, // can also be true or 'blocking'
   };
 }
@@ -44,6 +46,7 @@ export default function Course({ slug }) {
                   id={i}
                   title={e.name}
                   content={e.submodules}
+                  module={slug.url}
                 />
               ))}
             </div>
