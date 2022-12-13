@@ -41,7 +41,7 @@ export default function Course({ slug }) {
         <h1>{router.query.content}</h1>
         <iframe
           className="h-full w-full"
-          src="https://docs.google.com/presentation/d/11Ug2uUhPAoIGbYmWytIeXiLc5_NSGVRqowdyvgSTSyA/embed?start=false&amp;loop=false&amp;delayms=3000&amp;rm=minimal"
+          src="https://docs.google.com/presentation/d/1DcAVyyMgbGwlKfNvKbEeBKnZKN635o0kRC1mTBcNR-k/embed?start=false&amp;loop=false&amp;delayms=3000"
           allow="autoplay"
         ></iframe>
       </div>

@@ -4,6 +4,7 @@ import { BiCheck } from "react-icons/bi";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import Link from "next/link";
+import { parse, stringify } from "roman-numerals-api";
 
 const Accordion = ({ key, id, title, content, module }) => {
   const [isOpened, setOpened] = useState(false);
@@ -25,7 +26,9 @@ const Accordion = ({ key, id, title, content, module }) => {
           <h4 className="font-semibold flex items-center">
             <div className="flex flex-col justify-center items-center">
               <span className="text-xs text-primary-600/75">Module</span>
-              <span className="text-xl text-primary-600/75">{id + 1}</span>
+              <span className="text-xl text-primary-600/75">
+                {stringify(id + 1)}
+              </span>
             </div>
             <span className="ml-10 text-xl">{title}</span>
           </h4>
