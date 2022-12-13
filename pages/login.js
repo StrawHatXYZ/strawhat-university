@@ -113,7 +113,7 @@ export default function Signin() {
           <h1 className="text-xl font-bold text-center leading-tight tracking-tight text-gray-900 md:text-2xl">
             Login
           </h1>
-          <form className="space-y-4 md:space-y-6 " action="#">
+          <form className="space-y-4 md:space-y-6 " action="#" method="POST">
             <div>
               <label
                 htmlFor="email"
@@ -187,6 +187,7 @@ export default function Signin() {
             </div>
             <button
               onClick={googleLogin}
+              type="button"
               className="w-full text-primary-500 flex justify-center border-2 border-primary-500
 							 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-3 text-center bg-white hover:bg-secondary-200 focus:ring-indigo-300"
             >

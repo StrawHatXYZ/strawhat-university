@@ -155,7 +155,7 @@ export default function Signup() {
             Create Account
           </h1>
 
-          <form className="space-y-4 md:space-y-6" action="#">
+          <form className="space-y-4 md:space-y-6" action="#" method="POST">
             <div className="flex">
               <div className="flex flex-col ">
                 <label
@@ -294,6 +294,7 @@ export default function Signup() {
             </div>
             <button
               onClick={googleLogin}
+              type="button"
               className="w-full text-primary-500 border-2 flex justify-center 
 							 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-3 text-center border-primary-500 hover:bg-secondary-200 focus:ring-indigo-300"
             >
