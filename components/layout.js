@@ -100,9 +100,13 @@ export default function Layout({ children }) {
 													fill="white"
 												/>
 											</svg> */}
-											<img src="logo.jpg" width="90" height="100" />
+											<img
+												src="logo.jpg"
+												width="100"
+												className=" border-4 border-primary-600 rounded-3xl"
+											/>
 										</span>
-										<div className="flex h-full md:flex-col justify-center items-center py-6 pr-2">
+										<div className="flex h-full md:flex-col justify-center items-center py-5 pr-2">
 											<h1 className="md:text-2xl text-lg font-bold text-primary-600">
 												STRAW HAT
 											</h1>
